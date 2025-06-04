@@ -1,0 +1,398 @@
+/* Reset de estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover, .active {
+    color: #e74c3c;
+}
+
+/* Seção de Introdução */
+.introducao-emprestimos {
+    background-color: #fff;
+    padding: 30px 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.introducao-emprestimos h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.introducao-emprestimos p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+/* Opções de Empréstimos */
+.opcoes-emprestimos {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.opcao-emprestimo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.opcao-emprestimo h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.opcao-emprestimo p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.btn-emprestimo {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-emprestimo:hover {
+    background-color: #c0392b;
+}
+
+/* Seção de Detalhes de Empréstimo */
+.detalhes-emprestimo {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.detalhes-emprestimo h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.detalhes-emprestimo p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.opcoes-financiamento {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.opcao {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    text-align: center;
+}
+
+.opcao h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.opcao p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="number"] {
+    font-size: 1.2rem;
+}
+
+form button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #c0392b;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .opcoes-emprestimos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opcao-emprestimo {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .opcoes-financiamento {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opcao {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Reset de estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover, .active {
+    color: #e74c3c;
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 30px 15px;
+}
+
+/* Seção de Histórico de Empréstimos */
+.historico-emprestimos {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.historico-emprestimos h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.historico-emprestimos p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* Seção do Histórico de Empréstimos */
+.historico-secao {
+    margin-bottom: 30px;
+}
+
+.historico-secao h3 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+td {
+    color: #7f8c8d;
+}
+
+.status-aprovado {
+    color: green;
+    font-weight: bold;
+}
+
+.status-pendente {
+    color: orange;
+    font-weight: bold;
+}
+
+.status-rejeitado {
+    color: red;
+    font-weight: bold;
+}
+
+.detalles-link {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.detalles-link:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}

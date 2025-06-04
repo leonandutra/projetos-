@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="ia.css">
+    <link rel="stylesheet" href="IA.js">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Previsão do Tempo por CEP</h1>
+
+        <label for="cep">Digite seu CEP:</label>
+        <input type="text" id="cep" placeholder="Ex: 01001-000" maxlength="9">
+        <button onclick="buscarEndereco()">Buscar Previsão</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="IA.js"></script>
+</body>
+</html>

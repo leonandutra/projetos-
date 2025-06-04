@@ -1,0 +1,132 @@
+
+body {
+    /*altera a cor de fundo*/
+    background-color: #bff3df;
+    /*alinha texto no centro*/
+    text-align:center;
+    background-image: url("https://images.unsplash.com/photo-1497864979123-ef3595423b92?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFja2dyb3VuZCUyMGJsdXJ8ZW58MHx8MHx8fDA%3D");
+    background-size: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     /* text-shadow: 2px 2px 2px white ;   */
+    font-size: 20px;
+    margin: 0px;
+    
+}
+
+section{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    border-radius: 30px;
+    /*espaçamento interno*/
+    padding: 40px;
+    /*espaçamento externo*/
+    margin-top: 40px;
+    /*sombra*/
+    box-shadow: 7px 7px 20px black;
+    /* animation: animacao 4s alternate infinite; */
+}
+
+@keyframes animacao{
+    0%{ box-shadow: 2px 2px 8px red;}
+    25%{ box-shadow: 2px 2px 8px purple ;}
+    50%{box-shadow:2px 2px 8px yellow ;}
+    75%{box-shadow: 2px 2px 8px green ;}
+    100%{box-shadow: 2px 2px 8px blue ;}
+}
+
+
+/*trabalhando com classe ( personalizar muitos)*/
+.titulo{
+    color: crimson;
+    text-shadow: 1px 1px 1px grey;
+}
+/*trabalhando com id (personalizando um só)*/
+#perfil{
+    border-radius: 20px;
+    width: 250px;
+    border:  2px solid grey;
+}
+
+.informacoes{
+    list-style: none;
+    text-align: left;}
+
+section:hover{
+    background-color:aquamarine;
+    transition: 2s;
+    font-size: 25px;
+}
+
+/* presonalizar menu  */
+.menu{
+    background-color: black;      /*cor do fundo do menu*/
+    border-radius: 15px;            /*arredondar bordas do menu*/
+    color: white;
+}
+ /* deixar lista lado a lado  */
+ .menu ul li {
+    display: inline-block;  /* colocar opções da lista do menu  */
+    padding: 10px;          /* espaçamento interno */
+    width: 190px;           /* largura do botão do menu */
+ }
+
+ .menu ul li a {
+    color: white;           /*cor de letra*/
+    text-decoration: none;    /*decoração de link desativada*/
+ }
+ 
+
+
+.imgl{
+    border-radius: 50px;
+    width: 300px; 
+}
+
+
+.rodape{
+    /*cor do rodapé*/
+    background-color: rgba(0, 0, 0, 0.704);
+    /*cor da letra*/
+    color: white; 
+    /*margem de cima*/
+    margin-top: 40px;
+    /*espaçamento interno*/
+    padding-top: 20px;
+
+}
+
+.meno ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+#redes ul li a{
+    color: black;         /* cor da letra*/
+    text-decoration: none;  /* decoração do texto desativada*/
+} 
+.celular{
+    /*definindo*/
+    display: none;
+}
+
+
+
+/*definindo configuração do modo celular*/
+@media(max-width: 1050px){
+    .menu ul {
+        display: none;
+    }
+    .celular{
+        display: block; /*aparece menu hamburguer do celular*/
+        text-align: left;
+        padding: 8px;
+    }
+
+ul.mostraMenu{
+    display: inline-block;
+}
+
+}
+
+

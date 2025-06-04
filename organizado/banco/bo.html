@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolsa Família - Banco XYZ</title>
+    <link rel="stylesheet" href="bo.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Banco XYZ</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="banco.html">Início</a></li>
+                <li><a href="bo.html" class="active">Bolsa Família</a></li>
+                <li><a href="conta.html">Conta Corrente</a></li>
+                <li><a href="cartao.html">Cartão de Crédito</a></li>
+                <li><a href="emprestimos.html">Empréstimos</a></li>
+                <li><a href="historico.html">Histórico</a></li>
+                <li><a href="logout.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="bolsa-familia">
+            <h2>Programa Bolsa Familia</h2>
+            <p>Consulte os detalhes do seu benefício e histórico de pagamentos.</p>
+
+            <!-- Informações do Benefício -->
+            <div class="informacoes-beneficio">
+                <h3>Informações do Benefício</h3>
+                <p><strong>Status do Benefício:</strong> Ativo</p>
+                <p><strong>Valor do Benefício:</strong> R$ 400,00</p>
+                <p><strong>Data de Recebimento:</strong> 15/04/2025</p>
+                <p><strong>Próximo Pagamento:</strong> 15/05/2025</p>
+            </div>
+
+            <!-- Consultar Status -->
+            <div class="consultar-status">
+                <h3>Consultar Status do Benefício</h3>
+                <form action="#">
+                    <label for="cpf">Digite seu CPF para consultar:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
+                    <button type="submit">Consultar Status</button>
+                </form>
+            </div>
+
+            <!-- Histórico de Pagamentos -->
+            <div class="historico-pagamentos">
+                <h3>Histórico de Pagamentos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data do Pagamento</th>
+                            <th>Valor Pago</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15/03/2025</td>
+                            <td>R$ 400,00</td>
+                            <td><span class="status-pago">Pago</span></td>
+                        </tr>
+                        <tr>
+                            <td>15/02/2025</td>
+                            <td>R$ 400,00</td>
+                            <td><span class="status-pago">Pago</span></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/2025</td>
+                            <td>R$ 400,00</td>
+                            <td><span class="status-pago">Pago</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Atualizar Dados -->
+            <div class="atualizar-dados">
+                <h3>Atualizar Dados Pessoais</h3>
+                <form action="#">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+                    
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Endereço" required>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+                    
+                    <button type="submit">Atualizar Dados</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Banco XYZ - Todos os direitos reservados.</p>
+        <p>Suporte 24h: (11) 1234-5678</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimo - Banco XYZ</title>
+    <link rel="stylesheet" href="emp.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Banco XYZ</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="banco.html">Início</a></li>
+                <li><a href="conta.html">Conta Corrente</a></li>
+                <li><a href="extrato.html">Extrato</a></li>
+                <li><a href="tra.html">Transferências</a></li>
+                <li><a href="emp.html" class="active">Empréstimo</a></li>
+                <li><a href="logout.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Introdução ao Empréstimo -->
+        <section class="introducao-emprestimo">
+            <h2>Solicite seu Empréstimo Pessoal</h2>
+            <p>Com o Banco XYZ, você tem acesso a taxas de juros competitivas e opções flexíveis de pagamento. Veja as opções de empréstimo que oferecemos:</p>
+            <div class="opcoes-emprestimo">
+                <div class="opcao">
+                    <h3>Empréstimo Pessoal</h3>
+                    <p>Empréstimo sem garantia para qualquer necessidade. Parcelamento de até 24 vezes.</p>
+                    <p><strong>Taxa de Juros:</strong> 1,5% ao mês</p>
+                </div>
+                <div class="opcao">
+                    <h3>Empréstimo Consignado</h3>
+                    <p>Empréstimo com desconto em folha de pagamento. Parcelamento de até 48 vezes.</p>
+                    <p><strong>Taxa de Juros:</strong> 1,1% ao mês</p>
+                </div>
+                <div class="opcao">
+                    <h3>Empréstimo com Garantia de Imóvel</h3>
+                    <p>Empréstimo com garantia de imóvel, com as melhores condições. Parcelamento de até 120 meses.</p>
+                    <p><strong>Taxa de Juros:</strong> 0,8% ao mês</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário de Solicitação de Empréstimo -->
+        <section class="solicitacao-emprestimo">
+            <h3>Solicite seu Empréstimo</h3>
+            <form action="confirmacao-emprestimo.html" method="POST">
+                <label for="tipo-emprestimo">Selecione o Tipo de Empréstimo</label>
+                <select id="tipo-emprestimo" name="tipo-emprestimo" required>
+                    <option value="pessoal">Empréstimo Pessoal</option>
+                    <option value="consignado">Empréstimo Consignado</option>
+                    <option value="garantia-imovel">Empréstimo com Garantia de Imóvel</option>
+                </select>
+
+                <label for="valor">Valor do Empréstimo</label>
+                <input type="number" id="valor" name="valor" required placeholder="R$ 0,00" step="0.01">
+
+                <label for="parcelas">Número de Parcelas</label>
+                <input type="number" id="parcelas" name="parcelas" required placeholder="Ex: 12" min="1" max="120">
+
+                <label for="renda">Renda Mensal</label>
+                <input type="number" id="renda" name="renda" required placeholder="R$ 0,00" step="0.01">
+
+                <label for="descricao">Objetivo do Empréstimo</label>
+                <textarea id="descricao" name="descricao" rows="4" placeholder="Ex: Reforma de casa, compra de carro"></textarea>
+
+                <button type="submit" class="btn-solicitar">Solicitar Empréstimo</button>
+            </form>
+        </section>
+
+        <!-- Histórico de Empréstimos -->
+        <section class="historico-emprestimos">
+            <h3>Histórico de Empréstimos</h3>
+            <div class="emprestimo">
+                <p><strong>Empréstimo Pessoal</strong></p>
+                <span>R$ 3.000,00</span>
+                <span>12 Parcelas de R$ 300,00</span>
+                <span class="data">Solicitado em 10/03/2025</span>
+            </div>
+            <div class="emprestimo">
+                <p><strong>Empréstimo Consignado</strong></p>
+                <span>R$ 5.000,00</span>
+                <span>24 Parcelas de R$ 300,00</span>
+                <span class="data">Solicitado em 01/10/2024</span>
+            </div>
+            <div class="emprestimo">
+                <p><strong>Empréstimo com Garantia de Imóvel</strong></p>
+                <span>R$ 50.000,00</span>
+                <span>120 Parcelas de R$ 600,00</span>
+                <span class="data">Solicitado em 15/01/2024</span>
+            </div>
+            <a href="historico-completo.html" class="ver-historico">Ver Histórico Completo</a>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Banco XYZ - Todos os direitos reservados.</p>
+        <p>Suporte 24h: (11) 1234-5678</p>
+    </footer>
+</body>
+</html>

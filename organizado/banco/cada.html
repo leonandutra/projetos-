@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Banco XYZ</title>
+    <link rel="stylesheet" href="cada.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Banco XYZ</h1>
+        </div>
+    </header>
+
+    <main class="cadastro">
+        <br><br><br>
+        <h2>Crie sua conta no Banco XYZ</h2>
+        <form action="login.html" method="POST" id="cadastro-form">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Ex: João da Silva">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="exemplo@dominio.com">
+
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="CPF no formato XXX.XXX.XXX-XX">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="(XX) XXXXX-XXXX" pattern="\(\d{2}\) \d{5}-\d{4}" title="Telefone no formato (XX) XXXXX-XXXX">
+
+            <label for="data-nascimento">Data de Nascimento</label>
+            <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" name="endereco" required placeholder="Rua, número, bairro">
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required placeholder="Crie uma senha segura">
+
+            <label for="confirmar-senha">Confirmar Senha</label>
+            <input type="password" id="confirmar-senha" name="confirmar-senha" required placeholder="Repita a senha">
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <div class="login-link">
+            <p>Já tem uma conta? <a href="login.html">Faça login aqui</a></p>
+        </div>
+    </main>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>

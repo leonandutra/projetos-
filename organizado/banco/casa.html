@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimos - Banco XYZ</title>
+    <link rel="stylesheet" href="casa.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Banco XYZ</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="banco.html">Início</a></li>
+                <li><a href="conta.html">Conta Corrente</a></li>
+                <li><a href="cartao.html">Cartão de Crédito</a></li>
+                <li><a href="emp.html" class="active">Empréstimos</a></li>
+                <li><a href="logout.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção de Empréstimos -->
+        <section class="introducao-emprestimos">
+            <h2>Empréstimos Imobiliários e de Veículo</h2>
+            <p>Confira as opções de empréstimo para imóveis e veículos com as melhores condições e taxas de juros do mercado.</p>
+        </section>
+
+        <!-- Opções de Empréstimos -->
+        <section class="opcoes-emprestimos">
+            <div class="opcao-emprestimo">
+                <h3>Empréstimo Imobiliário</h3>
+                <p>Compre seu imóvel ou financie a casa dos seus sonhos com prazos e taxas que cabem no seu bolso.</p>
+                <a href="#emprestimo-imobiliario" class="btn-emprestimo">Ver Detalhes</a>
+            </div>
+            <div class="opcao-emprestimo">
+                <h3>Empréstimo de Veículo</h3>
+                <p>Financie o carro dos seus sonhos com taxas acessíveis e prazos flexíveis.</p>
+                <a href="#emprestimo-veiculo" class="btn-emprestimo">Ver Detalhes</a>
+            </div>
+        </section>
+
+        <!-- Seção de Empréstimo Imobiliário -->
+        <section id="emprestimo-imobiliario" class="detalhes-emprestimo">
+            <h2>Financiamento Imobiliário</h2>
+            <p>O Banco XYZ oferece financiamento para imóveis com as melhores condições do mercado. Abaixo, você encontra as opções de financiamento disponíveis.</p>
+            <div class="opcoes-financiamento">
+                <div class="opcao">
+                    <h3>Financiamento Residencial</h3>
+                    <p><strong>Taxa de Juros:</strong> a partir de 8% ao ano</p>
+                    <p><strong>Prazo:</strong> Até 30 anos</p>
+                    <p>Compre sua casa própria com facilidade e condições especiais.</p>
+                </div>
+                <div class="opcao">
+                    <h3>Financiamento Comercial</h3>
+                    <p><strong>Taxa de Juros:</strong> a partir de 9% ao ano</p>
+                    <p><strong>Prazo:</strong> Até 20 anos</p>
+                    <p>Financie seu imóvel comercial com condições exclusivas.</p>
+                </div>
+            </div>
+
+            <!-- Simulador de Empréstimo Imobiliário -->
+            <h3>Simule seu Financiamento Imobiliário</h3>
+            <form action="simulacao-imobiliaria.html" method="POST">
+                <label for="valor-imovel">Valor do Imóvel</label>
+                <input type="number" id="valor-imovel" name="valor-imovel" required placeholder="R$ 0,00">
+
+                <label for="prazo-imovel">Prazo (em anos)</label>
+                <select id="prazo-imovel" name="prazo-imovel" required>
+                    <option value="10">10 anos</option>
+                    <option value="15">15 anos</option>
+                    <option value="20">20 anos</option>
+                    <option value="30">30 anos</option>
+                </select>
+
+                <label for="renda-imovel">Renda Mensal</label>
+                <input type="number" id="renda-imovel" name="renda-imovel" required placeholder="R$ 0,00">
+
+                <button type="submit" class="btn-simular">Simular</button>
+            </form>
+
+            <!-- Formulário de Solicitação de Empréstimo Imobiliário -->
+            <h3>Solicite seu Empréstimo Imobiliário</h3>
+            <form action="confirmacao-imovel.html" method="POST">
+                <label for="nome-imovel">Nome Completo</label>
+                <input type="text" id="nome-imovel" name="nome-imovel" required placeholder="Digite seu nome">
+
+                <label for="cpf-imovel">CPF</label>
+                <input type="text" id="cpf-imovel" name="cpf-imovel" required placeholder="Digite seu CPF">
+
+                <label for="endereco-imovel">Endereço do Imóvel</label>
+                <input type="text" id="endereco-imovel" name="endereco-imovel" required placeholder="Digite o endereço do imóvel">
+
+                <label for="telefone-imovel">Telefone</label>
+                <input type="text" id="telefone-imovel" name="telefone-imovel" required placeholder="(XX) XXXXX-XXXX">
+
+                <button type="submit" class="btn-solicitar">Solicitar Financiamento</button>
+            </form>
+        </section>
+
+        <!-- Seção de Empréstimo de Veículo -->
+        <section id="emprestimo-veiculo" class="detalhes-emprestimo">
+            <h2>Financiamento de Veículo</h2>
+            <p>O Banco XYZ oferece financiamento para veículos novos e usados com condições vantajosas. Confira os detalhes abaixo.</p>
+            <div class="opcoes-financiamento">
+                <div class="opcao">
+                    <h3>Financiamento de Carro Novo</h3>
+                    <p><strong>Taxa de Juros:</strong> a partir de 6% ao ano</p>
+                    <p><strong>Prazo:</strong> Até 60 meses</p>
+                    <p>Compre seu carro novo com taxas especiais e prazos flexíveis.</p>
+                </div>
+                <div class="opcao">
+                    <h3>Financiamento de Carro Usado</h3>
+                    <p><strong>Taxa de Juros:</strong> a partir de 8% ao ano</p>
+                    <p><strong>Prazo:</strong> Até 48 meses</p>
+                    <p>Financie veículos usados com entrada facilitada e prazos acessíveis.</p>
+                </div>
+            </div>
+
+            <!-- Simulador de Empréstimo de Veículo -->
+            <h3>Simule seu Financiamento de Veículo</h3>
+            <form action="simulacao-veiculo.html" method="POST">
+                <label for="valor-veiculo">Valor do Veículo</label>
+                <input type="number" id="valor-veiculo" name="valor-veiculo" required placeholder="R$ 0,00">
+
+                <label for="prazo-veiculo">Prazo (em meses)</label>
+                <select id="prazo-veiculo" name="prazo-veiculo" required>
+                    <option value="12">12 meses</option>
+                    <option value="24">24 meses</option>
+                    <option value="36">36 meses</option>
+                    <option value="48">48 meses</option>
+                    <option value="60">60 meses</option>
+                </select>
+
+                <label for="renda-veiculo">Renda Mensal</label>
+                <input type="number" id="renda-veiculo" name="renda-veiculo" required placeholder="R$ 0,00">
+
+                <button type="submit" class="btn-simular">Simular</button>
+            </form>
+
+            <!-- Formulário de Solicitação de Empréstimo de Veículo -->
+            <h3>Solicite seu Empréstimo de Veículo</h3>
+            <form action="confirmacao-veiculo.html" method="POST">
+                <label for="nome-veiculo">Nome Completo</label>
+                <input type="text" id="nome-veiculo" name="nome-veiculo" required placeholder="Digite seu nome">
+
+                <label for="cpf-veiculo">CPF</label>
+                <input type="text" id="cpf-veiculo" name="cpf-veiculo" required placeholder="Digite seu CPF">
+
+                <label for="modelo-veiculo">Modelo do Veículo</label>
+                <input type="text" id="modelo-veiculo" name="modelo-veiculo" required placeholder="Digite o modelo do veículo">
+
+                <label for="telefone-veiculo">Telefone</label>
+                <input type="text" id="telefone-veiculo" name="telefone-veiculo" required placeholder="(XX) XXXXX-XXXX">
+
+                <button type="submit" class="btn-solicitar">Solicitar Financiamento</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Empréstimos - Banco XYZ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="historico-emprestimos">
+            <h2>Histórico de Empréstimos</h2>
+            <p>Confira o histórico de todos os empréstimos solicitados no Banco XYZ.</p>
+
+            <!-- Histórico de Empréstimos Imobiliários -->
+            <div class="historico-secao">
+                <h3>Empréstimos Imobiliários</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data da Solicitação</th>
+                            <th>Valor do Imóvel</th>
+                            <th>Prazo</th>
+                            <th>Status</th>
+                            <th>Detalhes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15/03/2025</td>
+                            <td>R$ 350.000,00</td>
+                            <td>20 anos</td>
+                            <td><span class="status-pendente">Pendente</span></td>
+                            <td><a href="detalhes-emprestimo-imovel.html" class="detalhes-link">Ver Detalhes</a></td>
+                        </tr>
+                        <tr>
+                            <td>05/02/2025</td>
+                            <td>R$ 450.000,00</td>
+                            <td>15 anos</td>
+                            <td><span class="status-aprovado">Aprovado</span></td>
+                            <td><a href="detalhes-emprestimo-imovel.html" class="detalhes-link">Ver Detalhes</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Histórico de Empréstimos de Veículos -->
+            <div class="historico-secao">
+                <h3>Empréstimos de Veículos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data da Solicitação</th>
+                            <th>Valor do Veículo</th>
+                            <th>Prazo</th>
+                            <th>Status</th>
+                            <th>Detalhes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25/01/2025</td>
+                            <td>R$ 70.000,00</td>
+                            <td>48 meses</td>
+                            <td><span class="status-aprovado">Aprovado</span></td>
+                            <td><a href="detalhes-emprestimo-veiculo.html" class="detalhes-link">Ver Detalhes</a></td>
+                        </tr>
+                        <tr>
+                            <td>10/12/2024</td>
+                            <td>R$ 35.000,00</td>
+                            <td>36 meses</td>
+                            <td><span class="status-rejeitado">Rejeitado</span></td>
+                            <td><a href="detalhes-emprestimo-veiculo.html" class="detalhes-link">Ver Detalhes</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Banco XYZ - Todos os direitos reservados.</p>
+        <p>Suporte 24h: (11) 1234-5678</p>
+    </footer>
+</body>
+</html>
+
+

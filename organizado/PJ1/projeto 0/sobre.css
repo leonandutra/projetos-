@@ -1,0 +1,60 @@
+body{
+    background-color:  gray;
+    text-align: center;
+    background-image:url(https://miro.medium.com/v2/resize:fit:705/1*PPUTbig7kyzaK_byI1gmzA.jpeg) ;
+    background-size: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px ;
+    margin: 0px;
+    color: grey;
+    text-shadow: 2px 2px 2px crimson  ;}
+  
+    
+
+    section{
+        background-color: white;
+        width: 500px;
+        margin: auto;
+        border-radius: 30px;
+        /*espaçamento interno*/
+        padding: 40px;
+        /*espaçamento externo*/
+        margin-top: 40px;
+        /*sombra*/
+        box-shadow: 7px 7px 20px greenyellow;
+        animation: animacao 10s alternate infinite;
+    }
+        
+        @keyframes animacao{
+            0%{ box-shadow: 2px 2px 8px red; transform: rotate(360deg);}
+            25%{ box-shadow: 2px 2px 8px purple ; transform: translateX(-100px);}
+            50%{box-shadow:2px 2px 8px yellow ;}
+            75%{box-shadow: 2px 2px 8px green ;}
+            100%{box-shadow: 2px 2px 8px blue ; background-color: gold;}
+            
+        }
+
+
+        .rodape{
+            /*cor do rodapé*/
+            background-color: rgba(0, 0, 0, 0.704);
+            /*cor da letra*/
+            color: white; 
+            /*margem de cima*/
+            margin-top: 40px;
+            /*espaçamento interno*/
+            padding-top: 20px;}
+        
+            section:hover{
+                background-color: greenyellow;
+                transition: 2s;
+                font-size: 25px;}
+        
+#img2{
+    border-radius: 500px;
+}
+
+            
+            
+            
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de Crédito - Banco XYZ</title>
+    <link rel="stylesheet" href="catao.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Banco XYZ</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="banco.html">Início</a></li>
+                <li><a href="conta.html">Conta Corrente</a></li>
+                <li><a href="cartao-credito.html" class="active">Cartão de Crédito</a></li>
+                <li><a href="emp.html">Empréstimo</a></li>
+                <li><a href="logout.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Introdução ao Cartão de Crédito -->
+        <section class="introducao-cartao">
+            <h2>Escolha o seu Cartão de Crédito</h2>
+            <p>Com o Banco XYZ, você tem acesso a cartões de crédito com benefícios exclusivos, como pontos no programa de recompensas, descontos e muito mais. Veja as opções abaixo:</p>
+            <div class="opcoes-cartao">
+                <div class="opcao">
+                    <h3>Cartão de Crédito Básico</h3>
+                    <p>Ideal para quem quer ter o controle das finanças com uma fatura simples.</p>
+                    <p><strong>Anuidade:</strong> R$ 100,00</p>
+                    <p><strong>Limite Inicial:</strong> R$ 1.000,00</p>
+                </div>
+                <div class="opcao">
+                    <h3>Cartão de Crédito Platinum</h3>
+                    <p>Perfeito para quem deseja um limite mais alto e benefícios exclusivos.</p>
+                    <p><strong>Anuidade:</strong> R$ 250,00</p>
+                    <p><strong>Limite Inicial:</strong> R$ 5.000,00</p>
+                </div>
+                <div class="opcao">
+                    <h3>Cartão de Crédito Black</h3>
+                    <p>Para clientes VIPs que desejam acesso a benefícios premium e um limite de crédito elevado.</p>
+                    <p><strong>Anuidade:</strong> R$ 500,00</p>
+                    <p><strong>Limite Inicial:</strong> R$ 15.000,00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário de Solicitação de Cartão de Crédito -->
+        <section class="solicitacao-cartao">
+            <h3>Solicite seu Cartão de Crédito</h3>
+            <form action="confirmacao-cartao.html" method="POST">
+                <label for="tipo-cartao">Selecione o Tipo de Cartão</label>
+                <select id="tipo-cartao" name="tipo-cartao" required>
+                    <option value="basico">Cartão Básico</option>
+                    <option value="platinum">Cartão Platinum</option>
+                    <option value="black">Cartão Black</option>
+                </select>
+
+                <label for="renda">Renda Mensal</label>
+                <input type="number" id="renda" name="renda" required placeholder="R$ 0,00" step="0.01">
+
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14">
+
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" required placeholder="Digite seu endereço">
+
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" name="telefone" required placeholder="(XX) XXXXX-XXXX">
+
+                <button type="submit" class="btn-solicitar">Solicitar Cartão</button>
+            </form>
+        </section>
+
+        <!-- Histórico de Faturas -->
+        <section class="historico-faturas">
+            <h3>Histórico de Faturas</h3>
+            <div class="fatura">
+                <p><strong>Fatura de Janeiro de 2025</strong></p>
+                <span>Valor Total: R$ 500,00</span>
+                <span>Vencimento: 10/02/2025</span>
+                <span>Status: Pago</span>
+            </div>
+            <div class="fatura">
+                <p><strong>Fatura de Fevereiro de 2025</strong></p>
+                <span>Valor Total: R$ 1.200,00</span>
+                <span>Vencimento: 10/03/2025</span>
+                <span>Status: Pendente</span>
+            </div>
+            <div class="fatura">
+                <p><strong>Fatura de Março de 2025</strong></p>
+                <span>Valor Total: R$ 750,00</span>
+                <span>Vencimento: 10/04/2025</span>
+                <span>Status: Pago</span>
+            </div>
+            <a href="historico-completo.html" class="ver-historico">Ver Histórico Completo</a>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Banco XYZ - Todos os direitos reservados.</p>
+        <p>Suporte 24h: (11) 1234-5678</p>
+    </footer>
+</body>
+</html>

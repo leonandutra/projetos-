@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" href="rede.css">
+    <link rel="stylesheet" href="rede.js">
+</head>
+<body>
+
+    <div id="login-screen" class="screen">
+        <h1>Bem-vindo ao WhatsApp </h1>
+        <input type="text" id="username" placeholder="Digite seu nome" required />
+        <button onclick="login()">Entrar</button>
+    </div>
+
+    <div id="chat-screen" class="screen" style="display: none;">
+        <div id="chat-header">
+            <h2>Chat</h2>
+            <span id="username-display"></span>
+        </div>
+        <div id="chat-box"></div>
+        <input type="text" id="message" placeholder="Digite sua mensagem" />
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+
+    <script src="rede.js"></script>
+</body>
+</html>

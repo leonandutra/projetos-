@@ -1,0 +1,52 @@
+.painel{
+    /*borda*/
+    border: 1px solid black;
+    /*alinha texto no centro*/
+    text-align: center;
+    /*largura da div*/
+    width: 400px;
+    /*centralizar toda div*/
+    margin: auto;
+    /*altura*/
+    height: 400px;
+    /*arredondar bordas*/
+    border-radius: 10px;
+    /*cor de fundo*/
+    background-color: lavender;
+    /*cor da letra*/
+    color: black;
+    /*tipo da fonte*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+input{
+    /*arredondar*/
+    border-radius: 10px;
+    /*altura*/
+    height: 30px;
+    /*largura*/
+    width: 300px;
+    /*centralizar*/
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botao{
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+.botao:hover{
+    background-color: darkblue;
+    transition: 1s;
+}
+
+#resultado{
+    font-size: 50px;
+    font-weight: bold;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferência Bancária - Banco XYZ</title>
+    <link rel="stylesheet" href="tra.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Banco XYZ</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="banco.html">Início</a></li>
+                <li><a href="conta.html">Conta Corrente</a></li>
+                <li><a href="extrato.html">Extrato</a></li>
+                <li><a href="tra.html" class="active">Transferências</a></li>
+                <li><a href="logout.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Visão Geral de Transferência -->
+        <section class="visao-geral-transferencia">
+            <h2>Realize uma Transferência</h2>
+            <p>Você pode transferir dinheiro para qualquer banco ou conta do Banco XYZ. Complete as informações abaixo para realizar sua transferência.</p>
+        </section>
+
+        <!-- Formulário de Transferência -->
+        <section class="formulario-transferencia">
+            <h3>Preencha os Dados da Transferência</h3>
+            <form action="confirmacao.html" method="POST">
+                <label for="conta-destino">Número da Conta de Destino</label>
+                <input type="text" id="conta-destino" name="conta-destino" required placeholder="Ex: 1234-5">
+                
+                <label for="nome-destinatario">Nome do Destinatário</label>
+                <input type="text" id="nome-destinatario" name="nome-destinatario" required placeholder="Ex: Maria da Silva">
+
+                <label for="agencia-destino">Agência de Destino</label>
+                <input type="text" id="agencia-destino" name="agencia-destino" required placeholder="Ex: 0001">
+
+                <label for="valor">Valor da Transferência</label>
+                <input type="number" id="valor" name="valor" required placeholder="R$ 0,00" step="0.01">
+
+                <label for="descricao">Descrição (opcional)</label>
+                <input type="text" id="descricao" name="descricao" placeholder="Ex: Pagamento de serviços">
+
+                <button type="submit" class="btn-transferir">Transferir</button>
+            </form>
+        </section>
+
+        <!-- Histórico de Transferências -->
+        <section class="historico-transferencias">
+            <h3>Histórico de Transferências</h3>
+            <div class="transferencia">
+                <p><strong>Transferência para Thiago de Prodozimo</strong></p>
+                <span>R$ 5,00</span>
+                <span class="data">Hoje, 15:30</span>
+            </div>
+            <div class="transferencia">
+                <p><strong>Transferência para Netflix</strong></p>
+                <span>R$ 1.200,00</span>
+                <span class="data">Ontem, 13:00</span>
+            </div>
+            <div class="transferencia">
+                <p><strong>Transferência para Banco XYZ</strong></p>
+                <span>R$ 350,00</span>
+                <span class="data">Há 2 dias, 09:00</span>
+            </div>
+            <a href="extrato.html" class="ver-historico">Ver Histórico Completo</a>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Banco XYZ - Todos os direitos reservados.</p>
+        <p>Suporte 24h: (11) 1234-5678</p>
+    </footer>
+</body>
+</html>

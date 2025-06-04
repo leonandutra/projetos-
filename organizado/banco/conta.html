@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta Corrente - Banco XYZ</title>
+    <link rel="stylesheet" href="conta.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Banco XYZ</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="banco.html">Início</a></li>
+                <li><a href="conta-corrente.html" class="active">Conta Corrente</a></li>
+                <li><a href="extrato.html">Extrato</a></li>
+                <li><a href="tra.html">Transferências</a></li>
+                <li><a href="logout.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Visão Geral da Conta -->
+        <section class="visao-geral">
+            <h2>Olá, Fernanda Vitoria Santos Lima!</h2>
+            <div class="conta-info">
+                <div class="informacoes">
+                    <p><strong>Conta Corrente</strong></p>
+                    <p><strong>Saldo Disponível:</strong> R$ 5.200,00</p>
+                    <p><strong>Limite de Crédito:</strong> R$ 3.000,00</p>
+                </div>
+                <button class="btn-transacao">Fazer Transferência</button>
+                <button class="btn-pagar">Pagar Conta</button>
+            </div>
+        </section>
+
+        <!-- Extrato da Conta -->
+        <section class="extrato">
+            <h3>Extrato Recente</h3>
+            <div class="transacoes">
+                <div class="transacao">
+                    <p><strong>Depósito</strong> - R$ 1.000,00</p>
+                    <span>Hoje, 10:00</span>
+                </div>
+                <div class="transacao">
+                    <p><strong>Transferência</strong> - R$ 500,00</p>
+                    <span>Ontem, 14:30</span>
+                </div>
+                <div class="transacao">
+                    <p><strong>Pagamento</strong> - R$ 250,00</p>
+                    <span>Há 2 dias, 12:00</span>
+                </div>
+                <a href="extrato.html" class="ver-extrato">Ver Extrato Completo</a>
+            </div>
+        </section>
+
+        <!-- Ações Rápidas -->
+        <section class="acoes-rapidas">
+            <h3>Ações Rápidas</h3>
+            <div class="acoes">
+                <a href="tra.html" class="acao">
+                    <img src="img/transferencia.png" alt="Transferir">
+                    <p>Transferir Dinheiro</p>
+                </a>
+                <a href="pagar-conta.html" class="acao">
+                    <img src="img/pagar-conta.png" alt="Pagar Conta">
+                    <p>Pagar Conta</p>
+                </a>
+                <a href="cartao-credito.html" class="acao">
+                    <img src="img/cartao-credito.png" alt="Cartão de Crédito">
+                    <p>Ver Cartão de Crédito</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Banco XYZ - Todos os direitos reservados.</p>
+        <p>Suporte 24h: (11) 1234-5678</p>
+    </footer>
+</body>
+</html>

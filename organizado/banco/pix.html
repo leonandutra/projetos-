@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferência PIX - Banco XYZ</title>
+    <link rel="stylesheet" href="pix.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Banco XYZ</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="banco.html">Início</a></li>
+                <li><a href="pix.html" class="active">PIX</a></li>
+                <li><a href="conta.html">Conta Corrente</a></li>
+                <li><a href="cartao.html">Cartão de Crédito</a></li>
+                <li><a href="emp.html">Empréstimos</a></li>
+                <li><a href="historico.html">Histórico</a></li>
+                <li><a href="logout.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="pix">
+            <h2>Transferência PIX</h2>
+            <p>Envie dinheiro rapidamente com a chave PIX ou utilizando QR Code. A transferência é instantânea!</p>
+
+            <!-- Formulário de Transferência PIX -->
+            <div class="transferencia-pix">
+                <h3>Realizar Transferência</h3>
+                <form action="#">
+                    <label for="chave">Chave PIX do destinatário:</label>
+                    <input type="text" id="chave" name="chave" placeholder="Digite a chave do destinatário" required>
+                    
+                    <label for="valor">Valor a ser transferido (R$):</label>
+                    <input type="number" id="valor" name="valor" placeholder="Digite o valor" required>
+                    
+                    <label for="descricao">Descrição (opcional):</label>
+                    <input type="text" id="descricao" name="descricao" placeholder="Exemplo: Pagamento de serviços">
+                    
+                    <button type="submit">Realizar Transferência</button>
+                </form>
+            </div>
+
+            <!-- Gerar QR Code PIX para Recebimento -->
+            <div class="gerar-qr">
+                <h3>Gerar QR Code para Recebimento</h3>
+                <form action="#">
+                    <label for="chave-recebimento">Chave PIX para Recebimento:</label>
+                    <input type="text" id="chave-recebimento" name="chave-recebimento" placeholder="Digite sua chave PIX" required>
+                    
+                    <label for="valor-recebimento">Valor para Recebimento (R$):</label>
+                    <input type="number" id="valor-recebimento" name="valor-recebimento" placeholder="Digite o valor" required>
+                    
+                    <button type="submit">Gerar QR Code</button>
+                </form>
+
+                <div id="qr-code-placeholder" class="qr-code-placeholder">
+                    <img src="qr-code-placeholder.png" alt="QR Code PIX">
+                    <p>Escaneie o QR Code para realizar o pagamento.</p>
+                </div>
+            </div>
+
+            <!-- Histórico de Transações PIX -->
+            <div class="historico-pix">
+                <h3>Histórico de Transações PIX</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Valor</th>
+                            <th>Tipo</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/04/2025</td>
+                            <td>R$ 150,00</td>
+                            <td>Transferência</td>
+                            <td><span class="status-sucesso">Concluída</span></td>
+                        </tr>
+                        <tr>
+                            <td>28/03/2025</td>
+                            <td>R$ 200,00</td>
+                            <td>Recebimento</td>
+                            <td><span class="status-sucesso">Recebido</span></td>
+                        </tr>
+                        <tr>
+                            <td>25/03/2025</td>
+                            <td>R$ 50,00</td>
+                            <td>Transferência</td>
+                            <td><span class="status-pendente">Pendente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Banco XYZ - Todos os direitos reservados.</p>
+        <p>Suporte 24h: (11) 1234-5678</p>
+    </footer>
+</body>
+</html>

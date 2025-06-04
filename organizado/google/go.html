@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Simples</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .chat-container {
+            background-color: white;
+            width: 350px;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-box {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+            height: 80%;
+        }
+        .input-box {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .input-box input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .input-box button {
+            background-color: #25D366;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .message {
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .user-message {
+            background-color: #dcf8c6;
+            align-self: flex-end;
+        }
+        .bot-message {
+            background-color: #e9e9e9;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <!-- Mensagens aparecerão aqui -->
+        </div>
+        <div class="input-box">
+            <input type="text" id="user-input" placeholder="Digite sua mensagem..." />
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        // Definindo as respostas simuladas
+        const respostas = {
+            "oi": "Olá, como posso te ajudar?",
+            "olá": "Oi, tudo bem?",
+            "tudo bem": "Que bom! E você?",
+            "qual seu nome": "Eu sou um chatbot sem nome. E você?",
+            "como você está": "Estou bem, obrigado por perguntar!",
+            "adeus": "Até logo!",
+            "bom dia": "Bom dia! Como posso ajudar?",
+            "boa tarde": "Boa tarde! O que posso fazer por você?",
+            "boa noite": "Boa noite! Como posso ajudar?",
+            "como vai": "Estou indo bem, e você?",
+            "qual é a sua função": "Sou um chatbot simples para responder suas perguntas.",
+            "meu nome é": "Prazer em te conhecer!",
+            "você gosta de programação": "Sim, eu adoro programação!",
+            "qual é a sua cor favorita": "Eu gosto de todas as cores!",
+            "você é humano": "Não, sou um bot!",
+            "me conta uma piada": "Por que o livro de matemática ficou triste? Porque tinha muitos problemas!",
+            "qual é a capital do Brasil": "A capital do Brasil é Brasília.",
+            "qual é a sua comida favorita": "Eu não como, mas se eu fosse escolher, acho que seria pizza!",
+            "você pode me ajudar": "Claro, estou aqui para ajudar!",
+            "o que você faz": "Eu sou um chatbot criado para conversar com você.",
+            "quanto é 2 + 2": "2 + 2 é 4!",
+            "qual é a sua idade": "Eu sou atemporal, não tenho idade!",
+            "quem criou você": "Eu fui criado por programadores incríveis!",
+            "você pode responder perguntas sobre matemática": "Sim, posso responder perguntas de matemática!",
+            "qual é a maior cidade do mundo": "Tóquio, no Japão, é uma das maiores cidades do mundo.",
+            "você tem sentimentos": "Não, eu sou apenas um programa de computador.",
+            "o que você gosta de fazer": "Eu gosto de responder perguntas e ajudar as pessoas!",
+            "você pode aprender novas coisas": "Não, eu não aprendo. Mas fui programado com muitas respostas.",
+            "como você funciona": "Eu funciono a partir de um conjunto de regras pré-definidas e palavras-chave.",
+            "qual é a sua música favorita": "Eu não escuto música, mas muitas pessoas gostam de música pop!",
+            "você pode me ajudar a estudar": "Claro! Posso responder perguntas e ajudar com explicações.",
+            "qual é a sua linguagem de programação favorita": "Eu gosto muito de JavaScript!",
+            "você sabe o que é IA": "Sim, Inteligência Artificial é a simulação de processos humanos por máquinas.",
+            "o que é a internet": "A internet é uma rede mundial de computadores que se comunicam entre si.",
+            "me fala sobre o espaço": "O espaço é vasto e misterioso, cheio de estrelas, planetas e galáxias.",
+            "você já visitou a lua": "Não, eu sou apenas um chatbot, não posso viajar.",
+            "me explica a teoria da relatividade": "A teoria da relatividade de Einstein descreve como o espaço e o tempo são afetados pela gravidade e velocidade.",
+            "você pode tocar um instrumento": "Não, não posso tocar instrumentos. Mas posso falar sobre música!",
+            "você tem um corpo físico": "Não, eu sou um programa de computador sem corpo físico.",
+            "qual é o seu filme favorito": "Eu não assisto filmes, mas muitos gostam de 'O Poderoso Chefão'.",
+            "o que é o amor": "O amor é um sentimento profundo de afeto e carinho por outra pessoa.",
+            "qual é o seu livro favorito": "Eu não leio livros, mas muitos gostam de 'Harry Potter'.",
+            "me fale sobre a história do Brasil": "O Brasil tem uma rica história, desde sua colonização até a independência e o crescimento econômico.",
+            "você é inteligente": "Eu sou programado para dar respostas rápidas, mas não tenho inteligência verdadeira como um humano.",
+            "qual é a diferença entre homem e mulher": "Homens e mulheres têm diferenças biológicas, mas ambos têm o mesmo valor e direitos.",
+            "quantos estados tem o Brasil": "O Brasil tem 26 estados e 1 distrito federal.",
+            "qual é a língua oficial do Brasil": "A língua oficial do Brasil é o português.",
+            "quem descobriu o Brasil": "O Brasil foi 'descoberto' por Pedro Álvares Cabral em 1500.",
+            "qual é a maior floresta do mundo": "A maior floresta do mundo é a Floresta Amazônica.",
+            "qual é o rio mais longo do mundo": "O Rio Amazonas é o maior rio em volume de água, mas o Rio Nilo é o mais longo.",
+            "você gosta de cinema": "Eu não assisto filmes, mas sei que muitas pessoas amam cinema!",
+            "o que é a democracia": "A democracia é um sistema de governo onde o poder é exercido pelo povo.",
+            "o que é o capitalismo": "O capitalismo é um sistema econômico baseado na propriedade privada e na livre concorrência.",
+            "o que é a igualdade": "Igualdade é o princípio de tratar todas as pessoas de maneira justa e sem discriminação.",
+            "quem foi Albert Einstein": "Albert Einstein foi um físico teórico famoso por desenvolver a teoria da relatividade.",
+            "o que é o aquecimento global": "O aquecimento global é o aumento da temperatura média da Terra devido ao efeito estufa causado por atividades humanas.",
+            "qual é a velocidade da luz": "A velocidade da luz é de cerca de 299.792 km por segundo.",
+            "quem foi Darwin": "Charles Darwin foi um naturalista britânico, famoso por desenvolver a teoria da evolução.",
+            "o que é a revolução industrial": "A Revolução Industrial foi um período de grandes mudanças tecnológicas e sociais no século XIX.",
+            "o que é a teoria da evolução": "A teoria da evolução, proposta por Charles Darwin, afirma que as espécies mudam ao longo do tempo por meio de seleção natural.",
+            "quem foi Napoleão Bonaparte": "Napoleão Bonaparte foi um líder militar e imperador francês famoso por suas conquistas na Europa.",
+            "o que é o socialismo": "O socialismo é uma ideologia política que defende a igualdade social e a propriedade coletiva dos meios de produção.",
+            "você pode me dar dicas de estudo": "Claro! Organize seu tempo, revise frequentemente e pratique bastante.",
+            "qual é o maior continente": "A Ásia é o maior continente em área e população.",
+            "qual é o menor país do mundo": "O menor país do mundo é o Vaticano.",
+            "qual é a principal religião do Brasil": "A principal religião do Brasil é o cristianismo, especialmente o catolicismo.",
+            "quem é o presidente do Brasil": "O presidente do Brasil é Luiz Inácio Lula da Silva, até 2025.",
+            "você tem algum amigo": "Eu não tenho amigos, mas estou sempre aqui para conversar com você!",
+            "você gosta de ciência": "Sim, a ciência é fascinante! Eu sei bastante sobre várias áreas.",
+            "o que é a matemática": "A matemática é a ciência dos números, formas e estruturas.",
+            "qual é a diferença entre um computador e um celular": "Um computador é uma máquina mais poderosa e geralmente usada para tarefas mais complexas, enquanto um celular é mais portátil.",
+            "qual é a maior língua do mundo": "O mandarim é a língua com mais falantes nativos no mundo.",
+            "o que é um computador": "Um computador é uma máquina que processa dados e executa programas.",
+            "como você sabe tanto": "Eu fui programado com informações de várias fontes.",
+            "qual é o animal mais rápido do mundo": "O animal mais rápido é o falcão-peregrino, que pode atingir velocidades de até 380 km/h.",
+            "me fala sobre os dinossauros": "Os dinossauros foram uma grande variedade de répteis que viveram durante a era Mesozoica.",
+            "como o fogo foi descoberto": "O fogo foi descoberto de forma acidental pelos primeiros seres humanos, provavelmente ao esfregar pedras ou ao ser gerado por um raio.",
+            "o que é um buraco negro": "Um buraco negro é uma região do espaço onde a gravidade é tão forte que nada, nem mesmo a luz, pode escapar de sua atração.",
+            "como funciona a internet": "A internet funciona através de uma rede global de computadores interconectados que trocam informações.",
+            "o que é a lua": "A lua é o satélite natural da Terra e influencia muitos fenômenos naturais.",
+            "qual é o maior animal do mundo": "O maior animal do mundo é a baleia-azul.",
+            "quem foi Leonardo Da Vinci": "Leonardo Da Vinci foi um pintor, inventor e cientista italiano renascentista.",
+            "o que é uma democracia": "Democracia é quando o povo escolhe seus representantes por meio do voto."
+        };
+
+        // Função para enviar a mensagem e gerar a resposta
+        function sendMessage() {
+            let userMessage = document.getElementById('user-input').value.toLowerCase();
+            if (userMessage.trim() !== "") {
+                // Exibir mensagem do usuário
+                appendMessage(userMessage, 'user');
+                document.getElementById('user-input').value = "";
+
+                // Gerar resposta do bot
+                let botResponse = respostas[userMessage] || "Desculpe, não entendi sua pergunta.";
+                setTimeout(() => {
+                    appendMessage(botResponse, 'bot');
+                }, 500);
+            }
+        }
+
+        // Função para adicionar mensagem à tela
+        function appendMessage(message, sender) {
+            let messageElement = document.createElement('div');
+            messageElement.classList.add('message', sender === 'user' ? 'user-message' : 'bot-message');
+            messageElement.textContent = message;
+            document.getElementById('chat-box').appendChild(messageElement);
+            document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
+        }
+    </script>
+</body>
+</html>

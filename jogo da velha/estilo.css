@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+.quadrado{
+    width: 200px;   /*largura*/
+    height: 200px;  /*altura*/
+    background-color: rgb(51, 66, 159);
+    border-radius: 10px;
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: center;
+    font-size: 120px;
+    color: white;
+}
+
+/*personalizando a div*/
+.painel{
+    background-color: rgba(0, 0, 0, 0.596); /*cor de fundo*/
+    width: 1000px;             /*largura*/
+    height: 800px;             /*altura*/
+    margin: auto;              /*centralizar*/
+    border-radius:20px;
+    text-align: center;
+}
+.jogo{
+    margin: auto;
+}
+h2{ 
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+body{
+    background-image: url("https://img.freepik.com/vetores-gratis/fundo-de-controlador-de-videogame-futurista-com-espaco-de-texto_1017-54730.jpg?semt=ais_hybrid&w=740");
+    background-size: auto;
+}
+
+.botao{
+    background-color: purple;
+    color: pink;
+    border: none;
+    font-size: 30px;
+    margin: 10px ;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.botão{
+    background-color: purple;
+    color: pink;
+    border: none;
+    font-size: 30px;
+    margin: 10px ;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
